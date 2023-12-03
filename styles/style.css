@@ -4,11 +4,28 @@ body {
 
 h1 {
     text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 footer {
     text-align: center;
     margin: 20px;
+}
+
+a:hover {
+    color: yellow;
+}
+
+p {
+    font-size: large;
+}
+
+form input, textarea, select {
+    background-color:beige;
+}
+
+form label {
+    color:brown;
 }
 
 
