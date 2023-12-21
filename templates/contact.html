@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
     <link rel="stylesheet" href="/styles/style.css" />
+    <script src="../scripts/main.js"></script>
   </head>
   <body>
     <h1>!חנות החיות המגניבה בארץ</h1>
@@ -27,35 +28,73 @@
       <a href="/templates/contact.html" target="_blank">צור קשר</a>
     </div>
 
-    <h3 style="text-align: right; text-decoration: underline">:צור קשר</h3>
-    <br />
+    <h3 style="text-align: right; text-decoration: underline">צור קשר</h3>
+    
 
-    <div style="text-align: right">
-      <form action="/templates/success.html" method="GET">
-        <input type="text" name="first_name" />
-        <label>:שם פרטי</label>
-        <br /><br />
-        <input type="text" name="last_name" />
-        <label>:שם משפחה</label>
-        <br /><br />
-        <select name="gender">
-          <option>:בחר/י</option>
-          <option value="1">זכר</option>
-          <option value="2">נקבה</option>
-        </select>
-        <label>:מין</label>
-        <br /><br />
-        <select name="gender">
-          <option>...בחר/י עיר</option>
-          <option value="1">תל אביב</option>
-          <option value="2">חיפה</option>
-        </select>
-        <label>:עיר</label>
-        <br /><br />
-        <textarea name="description"></textarea>
-        <label>:הודעה</label>
-        <br /><br />
-        <button>שלח</button>
+    <div class="form-container">
+      <form action="/templates/success.html" method="GET" id="formBox" onsubmit="return formValidation()">
+        <table>
+          <tbody>
+            <tr>
+                <td>
+                  <label>שם פרטי</label>
+                </td>
+              <td>
+                <input type="text" name="first_name" id="firstNameBox"/>
+              </td>
+            </tr>
+            <br /><br />
+            <tr>
+                <td>
+                  <label>שם משפחה</label>
+                </td>
+              <td>
+                <input type="text" name="last_name" id="lastNameBox" />
+              </td>
+            </tr>
+            <br /><br />
+            <tr>
+                <td>
+                  <label>מין</label>
+                </td>
+              <td>
+                <select name="gender">
+                  <option>בחר/י</option>
+                  <option value="1">זכר</option>
+                  <option value="2">נקבה</option>
+                </select>
+              </td>
+            </tr>
+            <br /><br />
+            <tr>
+                <td>
+                  <label>עיר</label>
+                </td>
+              <td>
+                <select name="gender">
+                  <option>בחר/י עיר</option>
+                  <option value="1">תל אביב</option>
+                  <option value="2">חיפה</option>
+                </select>
+              </td>
+            </tr>
+            <br /><br />
+            <tr>
+                <td>
+                  <label>הודעה</label>
+                </td>
+              <td>
+                <textarea name="description" id="messageBox"></textarea>
+              </td>
+            </tr>
+            <br /><br />
+            <tr>
+              <td>
+                <button type="submit">שלח</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </form>
     </div>
 
